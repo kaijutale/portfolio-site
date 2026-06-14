@@ -39,8 +39,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# docs (個人作業ドキュメント、 publicリポ非公開)
-.docs/
+# docs: 設計ドキュメント本体(architecture/conventions等)は追跡。個人の作業記録のみ除外
+.docs/logs/local/
+.docs/plans/
+.docs/gep-pr-reviews/
+.docs/output/
 
 # serena
 .serena
