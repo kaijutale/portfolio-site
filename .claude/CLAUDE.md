@@ -22,9 +22,9 @@ src/lib/              -- ユーティリティ
 ## Rules
 
 - `any`禁止、型明示（型安全性）
-- 新規コンポーネント: 関数宣言
+- 新規コンポーネント: 関数宣言（理由: 既存コードベース統一）
 - スタイル: CSS Modules + Tailwind。既存パターン準拠
-- アニメーション: Motion優先。GSAP=既存一貫性時のみ
+- アニメーション: Motion優先。GSAP=既存一貫性時のみ（理由: ランタイム二重化回避）
 - `src/components/ui/` 変更禁止（shadcn/ui自動生成）
 - 新規UI -> `src/app/components/`配置
 - 既存コードのパターンに従う
@@ -39,6 +39,7 @@ src/lib/              -- ユーティリティ
 dev: `pnpm dev`
 build: `pnpm build`
 lint: `pnpm lint:fix`
+typecheck: `pnpm typecheck`
 pkg: pnpm（packageManager設定。npm/yarn不可）
 
 ## Docs
